@@ -1,3 +1,11 @@
+GIT
+  remote: git://github.com/binarylogic/authlogic.git
+  revision: e6000bd197bd7f93bf5ffb30db1df2dec8ab686d
+  specs:
+    authlogic (3.2.0)
+      activerecord (>= 3.0.0)
+      activesupport (>= 3.0.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -106,6 +114,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  authlogic!
   bcrypt-ruby (= 3.0.1)
   bootstrap-sass (= 2.1)
   coffee-rails (~> 3.2.1)

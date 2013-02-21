@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-	attr_accessible :email, :name, :password
+	attr_accessible :email, :name, :password, :password_confirmation
 
 	before_save { |user| user.email = email.downcase }
 	
@@ -11,5 +11,5 @@ class User < ActiveRecord::Base
 	  					:uniqueness => { :case_sensitive => false }
 
 	validates :password,  :presence => true, :length => { :maximum => 16 }
-
+	acts_as_authentic
 end

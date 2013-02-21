@@ -4,9 +4,15 @@
       <%= link_to "sample app", '#', :id => "logo" %>
       <nav>
         <ul class="nav pull-right">
-          <li><%= link_to "Home",    '#' %></li>
-          <li><%= link_to "Help",    '#' %></li>
-          <li><%= link_to "Sign in", '#' %></li>
+          <% if @current_user %>
+              <li><%= link_to "profile" , account_path %></li>
+              <li><%= link_to "logout" , signout_path %></li>
+              <li><%= gravatar_for @current_user %></li>
+          <% else %>
+            <li><%= link_to "Home",    '#' %></li>
+            <li><%= link_to "Help",    '#' %></li>
+            <li><%= link_to "Sign in", signin_path %></li>
+          <% end %>
         </ul>
       </nav>
     </div>
